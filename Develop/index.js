@@ -67,7 +67,7 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(file, data) {}
 
 // TODO: Create a function to initialize app
 function init() {}
