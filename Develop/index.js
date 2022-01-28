@@ -68,8 +68,8 @@ const questions = [
 
 // TODO: Create a function to initialize app
 function init() {
-    return inquirer.prompt(questions
-    ).then(({
+    return inquirer.prompt(questions)
+    .then(({
         projectTitle,
         projectDescription,
         projectInstallation,
@@ -81,40 +81,38 @@ function init() {
         userGithub,
         userEmail
     }) => {
-        const template = `# ${projectTitle}
-            
-            ## Table of Contents
-                * [Description](#Description)
-                * [Installation](#Installation)
-                * [Usage](#Usage)
-                * [License](#License)
-                * [Contributors](#Contributors)
-                * [Tests](#Tests)
-                * [Issues](#Issues)
-                * [Contact](#Contact)
-            ## Description
-            ${projectDescription}
-            ## Installation
-            ${projectInstallation}
-            ## Usage
-            ${projectUsage}
-            ## License
-            ${projectLicense}
-            ## Contributors
-            ${projectContributors}
-            ## Tests
-            ${projectTests}
-            ## Issues
-            ${projectIssues}
-            ## Contact
-                * GitHub: ${userGithub}
-            * Email: ${userEmail}
-            `;
-        createNewFile(title, template);
+    const template = `# ${projectTitle}    
+## Table of Contents
+* [Description](#Description)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributors](#Contributors)
+* [Tests](#Tests)
+* [Issues](#Issues)
+* [Contact](#Contact)
+## Description
+${projectDescription}
+## Installation
+${projectInstallation}
+## Usage
+${projectUsage}
+## License
+${projectLicense}
+## Contributors
+${projectContributors}
+## Tests
+${projectTests}
+## Issues
+${projectIssues}
+## Contact
+* GitHub: ${userGithub}
+* Email: ${userEmail}`;
+    createNewFile(title, template);
     }
     );
     function createNewFile(fileName, data) {
-        fs.writeFile('./${fileName}.md', data, err => {
+        fs.writeFile('./generatedREADME.md', data, err => {
             if (err) {
                 console.log(err)
             }
