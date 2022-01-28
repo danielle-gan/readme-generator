@@ -1,23 +1,23 @@
 {
-  "dependencies": {
-    "inquirer": "^8.2.0"
-  },
   "name": "readme-generator",
-  "description": "[How to create a Professional README](./readme-guide.md)",
   "version": "1.0.0",
+  "description": "[How to create a Professional README](./readme-guide.md)",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "console.log(\"hello\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danielle-gan/readme-generator.git"
   },
-  "author": "Danielle Gan",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/danielle-gan/readme-generator/issues"
   },
-  "homepage": "https://github.com/danielle-gan/readme-generator#readme"
+  "homepage": "https://github.com/danielle-gan/readme-generator#readme",
+  "dependencies": {
+    "cjs-loader": "^0.1.0",
+    "inquirer": "^8.2.0"
+  }
 }

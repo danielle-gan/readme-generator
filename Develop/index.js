@@ -1,8 +1,8 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown.js');
-
+const { title } = require('process');
+// const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -35,7 +35,8 @@ const questions = [
             "GNU",
             "MIT",
             "ISC",
-            "Mozilla"
+            "Mozilla",
+            "None"
         ]
     },
     {
@@ -50,7 +51,7 @@ const questions = [
     },
     {
         type: "input",
-        name: "issues",
+        name: "projectIssues",
         message: "What would someone do if they had any issues with your project?"
     },
     {
@@ -63,14 +64,65 @@ const questions = [
         name: "userEmail",
         message: "What is your email?"
     }
-
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(file, data) {}
-
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    return inquirer.prompt(questions
+    ).then(({
+        projectTitle,
+        projectDescription,
+        projectInstallation,
+        projectUsage,
+        projectLicense,
+        projectContributors,
+        projectTests,
+        projectIssues,
+        userGithub,
+        userEmail
+    }) => {
+        const template = `# ${projectTitle}
+            
+            ## Table of Contents
+                * [Description](#Description)
+                * [Installation](#Installation)
+                * [Usage](#Usage)
+                * [License](#License)
+                * [Contributors](#Contributors)
+                * [Tests](#Tests)
+                * [Issues](#Issues)
+                * [Contact](#Contact)
+            ## Description
+            ${projectDescription}
+            ## Installation
+            ${projectInstallation}
+            ## Usage
+            ${projectUsage}
+            ## License
+            ${projectLicense}
+            ## Contributors
+            ${projectContributors}
+            ## Tests
+            ${projectTests}
+            ## Issues
+            ${projectIssues}
+            ## Contact
+                * GitHub: ${userGithub}
+            * Email: ${userEmail}
+            `;
+        createNewFile(title, template);
+    }
+    );
+    function createNewFile(fileName, data) {
+        fs.writeFile('./${fileName}.md', data, err => {
+            if (err) {
+                console.log(err)
+            }
+            console.log('README has been generated');
+        })
+    }
+
+}
 
 // Function call to initialize app
 init();
