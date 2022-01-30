@@ -16,11 +16,11 @@ Install by typing "npm init" then "npm install inquirer" into your terminal.
 Type node index and then answer the prompts fully
 
 # Screenshots
-[!SS1](https://github.com/danielle-gan/readme-generator/blob/main/Develop/assets/images/terminal-prompt-SS.PNG)
-[!SS2](https://github.com/danielle-gan/readme-generator/blob/main/Develop/assets/images/markdown-SS.PNG)
+![SS1](https://github.com/danielle-gan/readme-generator/blob/main/Develop/assets/images/terminal-prompt-SS.PNG)
+![SS2](https://github.com/danielle-gan/readme-generator/blob/main/Develop/assets/images/markdown-SS.PNG)
 
 # Video 
-[!TutorialVideo]
+![TutorialVideo](https://github.com/danielle-gan/readme-generator/blob/main/Develop/assets/images/readme-tutorial.webm)
 
 # Made With
 - Javascript
