@@ -1,4 +1,4 @@
-# readme-generator    
+# Title!    
 ## Table of Contents
 * [Description](#Description)
 * [Installation](#Installation)
@@ -9,19 +9,19 @@
 * [Issues](#Issues)
 * [Contact](#Contact)
 ## Description
-A lovely node js project that generates high-quality, and professional looking readme's.
+Description of project :)
 ## Installation
-Type in npm init then npm install inquirer
+npm init npm install inquirer
 ## Usage
-Navigate to the "Develop" directory and then type in "node index" into your terminal
+node index in the terminal
 ## License
 None
 ## Contributors
-Myself -- Danielle Gan
+Me!
 ## Tests
-There are no tests for this application yet.
+None
 ## Issues
-Contact me!! My info is below :)
+Contact me
 ## Contact
 * GitHub: danielle-gan
 * Email: danielle.gan@uconn.edu
