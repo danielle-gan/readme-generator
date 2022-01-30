@@ -11,6 +11,9 @@ Use Node.js and Inquirer to create a professional readme generator.
 - Github profile and email are linked in the "Questions" section
 - The table of contents links to its corresponding sections. 
 
+# Struggles Encountered
+- As of right now, this project is incomplete! I still need license badges and to fix up some sections and link to github profile, but I've had a rough couple of weeks. Will update soon!!
+
 # Usage
 Install by typing "npm init" then "npm install inquirer" into your terminal.
 Type node index and then answer the prompts fully
