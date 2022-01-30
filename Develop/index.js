@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const { title } = require('process');
+const { projectTitle } = require('process');
 // const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
@@ -108,11 +108,11 @@ ${projectIssues}
 ## Contact
 * GitHub: ${userGithub}
 * Email: ${userEmail}`;
-    createNewFile(title, template);
+    createNewFile(projectTitle, template);
     }
     );
     function createNewFile(fileName, data) {
-        fs.writeFile('./generatedREADME.md', data, err => {
+        fs.writeFile('./{$fileName}.md', data, err => {
             if (err) {
                 console.log(err)
             }
